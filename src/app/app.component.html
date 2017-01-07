@@ -5,15 +5,18 @@
   <div>{{title.firstName}} {{title.lastName}}</div>
   <button (click)="logText(textarea.value)">Update Log</button>
   <h2>Log <button (click)="log=''">Clear</button></h2>
-  <share-buttons 
-   [url]="linkToShare" 
-   [defaultStyle]="false"
-   [facebook]="fbInner"
-   [twitter]="twitterInner"
-   [pinterest]="pintInner"
-   [linkedIn]="inInner"
-   [google]="googleInner"
-   [tumblr]="tumblrInner"></share-buttons>
+  <div id="shareNew">
+      <share-buttons 
+       [url]="linkToShare" 
+       [defaultStyle]="true"
+       [facebook]="fbInner"
+       [twitter]="twitterInner"
+       [pinterest]="pintInner"
+       [linkedIn]="inInner"
+       [google]="googleInner"
+       [tumblr]="tumblrInner"> 
+       </share-buttons>
+   </div>
   <pre>{{log}}</pre>
  <app-create *ngIf="edited==true"></app-create>
  <app-list1></app-list1>
