@@ -29,3 +29,14 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## AutoRefreshing issue in Ubuntu
+ 
+ issue on Ubuntu and the fix is
+
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+as highlighted on
+https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers 
+
+Will use to reflecting Code changes automatically in browser.
