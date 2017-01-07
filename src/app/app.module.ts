@@ -10,12 +10,15 @@ import{ListComponent} from './list.component';
 import{ListService} from './list.service';
 import{UpdateComponent} from './update.component';
 import{UpdateService} from './update.service';
+import {DeleteComponent} from './delete.component';
+import{DeleteService} from './delete.service';
 @NgModule({
   declarations: [
     AppComponent,
     CreateComponent,
     ListComponent,
-    UpdateComponent
+    UpdateComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,7 @@ import{UpdateService} from './update.service';
     HttpModule,
     ShareButtonsModule
   ],
-  providers: [CreateServiceService,ListService,UpdateService],
+  providers: [CreateServiceService,ListService,UpdateService,DeleteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
