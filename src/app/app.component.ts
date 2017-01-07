@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  public edited = true; 
 	 shareTitle = "Sharing is caring";
   fbInner = "<img src='./assets/img/custom-facebook.svg'>";
   twitterInner = "<img src='../assets/img/custom-twitter.svg'>";

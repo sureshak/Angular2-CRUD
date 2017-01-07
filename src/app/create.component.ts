@@ -6,8 +6,10 @@ import { CreateServiceService } from './create-service.service';
   templateUrl: './create.component.html' 
 })
 export class CreateComponent implements OnInit {
-	  
-  constructor(public _post:CreateServiceService) { }
+	 public edited = true; 
+  constructor(public _post:CreateServiceService) {
+  		this.edited = true;
+   }
 
   ngOnInit() {
 

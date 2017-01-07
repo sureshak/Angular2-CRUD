@@ -15,5 +15,7 @@
    [google]="googleInner"
    [tumblr]="tumblrInner"></share-buttons>
   <pre>{{log}}</pre>
- <app-create></app-create>
+ <app-create *ngIf="edited==true"></app-create>
+ <app-list1></app-list1>
+ <app-update></app-update>
 </h1>

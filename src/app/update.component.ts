@@ -28,8 +28,7 @@ fill(s){
 	this.Name=s[0]['Name']
 	this.Email=s[0]['Email']
 	this.Mobile=s[0]['Mobile']
-	this.Pincode=s[0]['Pincode']
-// console.log(s[0]['Name'])
+	this.Pincode=s[0]['Pincode'] 
 }
 gett(){
 
@@ -51,14 +50,14 @@ UpdateForm(form){
 	this.tog()
 
 }
-updatee(){
+updateTest(){
 	// console.log("inside call api");
-	// console.log("Enter pasword:",this.Passwd,"original password",this.stri[0]["Password"]);
+	console.log("Enter pasword:",this.Passwd,"original password",this.stri[0]["Password"]);
 	if(this.stri[0]["Password"]==this.Passwd){
 	
 	this.sa["Password"]=this.Passwd
 	// console.log(this.sa);
-	this._put.upda("http://127.0.0.1:8000/bk/rud/"+this.Update+"/",this.sa).subscribe(d =>{console.log();this.succ=true;
+	this._put.upda("http://192.168.6.153:8000/bk/rud/"+this.Update+"/",this.sa).subscribe(d =>{console.log();this.succ=true;
 	this.visible=false;
 	this.visi=false;})
 	// console.log("sucess");

@@ -11,7 +11,7 @@ export class UpdateService {
  }
 
  upda(urll,dat){
- 		// console.log("Update service");
+ 		 console.log("Update service");
  		// console.log("inshkdas=>",dat);
           let headers      = new Headers({ 'Content-Type': 'application/json' });
           	// headers['Access-Control-Allow-Origin'] = '*';
