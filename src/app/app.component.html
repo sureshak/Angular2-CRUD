@@ -1,11 +1,28 @@
 <h1>
  <input [(ngModel)]="title.lastName" type="text">
- <textarea ref-textarea [(ngModel)]="textValue" rows="4"></textarea><br/>
- <button (click)="newMinor()">Test Button</button>
-  <div>{{title.firstName}} {{title.lastName}}</div>
-  <button (click)="logText(textarea.value)">Update Log</button>
-  <h2>Log <button (click)="log=''">Clear</button></h2>
-  <div id="shareNew">
+ <textarea ref-textarea [(ngModel)]="textValue" rows="4"></textarea><br/> 
+  <div>
+    {{title.firstName}} {{title.lastName}}
+    <button (click)="logText(textarea.value)">Update Log</button>
+     Log <button (click)="log=''">Clear</button> 
+  </div> 
+  <pre>{{log}}</pre>
+  <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+      <div class="navbar-header">
+        <a routerLink='home' class="navbar-brand">CRUD</a>
+      </div> 
+          <a routerLink='create'>Create</a> 
+          <a routerLink='list'>List</a> 
+          <a routerLink='update'>Update</a> 
+          <a routerLink='delete'>Delete</a> 
+      </ul>
+  </div>
+</h1>
+<div class='container'>
+  <router-outlet></router-outlet>
+</div>
+ <div id="shareNew">
       <share-buttons 
        [url]="linkToShare" 
        [defaultStyle]="true"
@@ -17,9 +34,3 @@
        [tumblr]="tumblrInner"> 
        </share-buttons>
    </div>
-  <pre>{{log}}</pre>
- <app-create *ngIf="edited==true"></app-create>
- <app-list1></app-list1>
- <app-update></app-update>
- <app-delete></app-delete>
-</h1>

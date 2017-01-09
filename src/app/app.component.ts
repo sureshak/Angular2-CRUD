@@ -17,9 +17,7 @@ export class AppComponent {
 	private textValue ="Inital Text";
 	private log: string ='';
    title = {firstName:"suresh",lastName:"AK",phone:"9789670789"};
-newMinor(){
-	alert("hello I am here");
-}
+ 
 logText(value:string){
 	this.log= `Text changed to '${value}'\n`;
 }
